@@ -7,17 +7,17 @@ import {
   DeleteButton,
 } from './Contacts.styled';
 
-const Contacts = props => {
-  const { data, filter } = props;
+const Contacts = ({ data, filter, onDelete }) => {
   let filterData = data.filter(el => {
     return el.name.toLowerCase().includes(filter);
   });
 
   const handleOnClick = evt => {
-    props.onDelete(evt.currentTarget.id);
+    onDelete(evt.currentTarget.id);
   };
 
   if (filterData.length === 0) return;
+
   return (
     <ContactList>
       {filterData.map(el => {
