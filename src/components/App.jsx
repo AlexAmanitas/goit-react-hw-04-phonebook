@@ -37,9 +37,8 @@ export const App = () => {
     setFilter(data);
   };
 
-  const handleClickDelete = data => {
-    console.log(data);
-    setContacts(contacts.filter(el => el.id !== data));
+  const handleClickDelete = id => {
+    setContacts(contacts.filter(el => el.id !== id));
   };
 
   return (
