@@ -33,10 +33,6 @@ export const App = () => {
     setContacts([...contacts, data]);
   };
 
-  const handleChangeFilter = data => {
-    setFilter(data);
-  };
-
   const handleClickDelete = id => {
     setContacts(contacts.filter(el => el.id !== id));
   };
@@ -46,7 +42,7 @@ export const App = () => {
       <h2>Phonebook</h2>
       <Form onSubmit={formSubmitHandler} />
       <h2>Contacts</h2>
-      <Filter onChange={handleChangeFilter} />
+      <Filter onChange={setFilter} />
       <Contacts onDelete={handleClickDelete} data={contacts} filter={filter} />
     </div>
   );
