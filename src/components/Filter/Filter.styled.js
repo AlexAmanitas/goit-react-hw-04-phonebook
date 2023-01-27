@@ -8,18 +8,19 @@ export const FilterBox = styled.div`
 export const Label = styled.label`
   font-size: 18px;
   font-weight: 500;
+  align-self: center;
 `;
 
 export const Input = styled.input`
-  width: 200px;
+  width: 400px;
   font-size: 15px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  padding: 5px;
+  margin: 5px 20px 15px;
+  padding: 7px;
   border: 1px solid #888;
   border-radius: 5px;
 
   &:focus-visible {
-    outline: 1px solid #4b98f5;
+    outline: 1px solid #ff6c00;
+    border: 1px solid #fff;
   }
 `;

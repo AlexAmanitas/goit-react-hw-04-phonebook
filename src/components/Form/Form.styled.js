@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const TheForm = styled.form`
-  width: 300px;
+  width: 400px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border: 1px solid #333;
-  border-radius: 3px;
+  border: 1px solid #ff6c00;
+  border-radius: 16px;
 `;
 
 export const Label = styled.label`
@@ -22,7 +22,8 @@ export const Input = styled.input`
   border-radius: 5px;
 
   &:focus-visible {
-    outline: 1px solid #4b98f5;
+    outline: 1px solid #ff6c00;
+    border: 1px solid #fff;
   }
 `;
 
@@ -33,13 +34,13 @@ export const SubmitBtn = styled.button`
   font-weight: 600;
   border-radius: 5px;
   border: none;
-  background-color: #ddd;
-  color: #333;
+  background-color: #fff;
+  color: #ff6c00;
   cursor: pointer;
   transition: background-color 300ms linear, color 300ms linear;
 
   &:hover {
-    background-color: #4b98f5;
+    background-color: #ff6c00;
     color: #eee;
   }
 `;

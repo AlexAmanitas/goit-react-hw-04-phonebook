@@ -4,12 +4,12 @@ export const ContactList = styled.ul``;
 
 export const ContactListItem = styled.li`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 `;
 
 export const ContactName = styled.p`
-  margin-right: 15px;
+  margin-left: 30px;
 `;
 
 export const ContactNumber = styled.p`
@@ -24,13 +24,13 @@ export const DeleteButton = styled.button`
   font-weight: 600;
   border-radius: 5px;
   border: none;
-  background-color: #ddd;
-  color: #333;
+  background-color: #fff;
+  color: #ff6c00;
   cursor: pointer;
   transition: background-color 300ms linear, color 300ms linear;
 
   &:hover {
-    background-color: #4b98f5;
+    background-color: #ff6c00;
     color: #eee;
   }
 `;

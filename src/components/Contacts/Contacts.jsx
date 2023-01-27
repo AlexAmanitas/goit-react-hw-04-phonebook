@@ -8,9 +8,12 @@ import {
 } from './Contacts.styled';
 
 const Contacts = ({ data, filter, onDelete }) => {
-  let filterData = data.filter(el => {
-    return el.name.toLowerCase().includes(filter);
-  });
+  let filterData = [];
+  if (data !== '') {
+    filterData = data.filter(el => {
+      return el.name.toLowerCase().includes(filter.toLowerCase());
+    });
+  }
 
   const handleOnClick = evt => {
     onDelete(evt.currentTarget.id);
