@@ -1,13 +1,10 @@
 import PropTypes from 'prop-types';
 import { FilterBox, Label, Input } from './Filter.styled';
 
-const Filter = props => {
-  let filter;
-
+const Filter = ({ onChange, filter }) => {
   const handleChange = evt => {
     filter = evt.currentTarget.value;
-
-    props.onChange(filter);
+    onChange(filter);
   };
 
   return (
@@ -21,7 +18,6 @@ const Filter = props => {
 export default Filter;
 
 Filter.propTypes = {
-  props: PropTypes.shape({
-    onChange: PropTypes.func.isRequired,
-  }),
+  onChange: PropTypes.func.isRequired,
+  filter: PropTypes.string,
 };
