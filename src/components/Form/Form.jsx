@@ -4,7 +4,6 @@ import uniqid from 'uniqid';
 import { TheForm, Label, Input, SubmitBtn } from './Form.styled';
 
 const Form = ({ onSubmit }) => {
-  const [id, setId] = useState(uniqid());
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -24,8 +23,7 @@ const Form = ({ onSubmit }) => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    setId(uniqid());
-    onSubmit({ id: id, name: name, number: number });
+    onSubmit({ name, number, id: uniqid() });
     resetForm();
   };
 

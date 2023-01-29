@@ -5,7 +5,7 @@ import Contacts from 'components/Contacts';
 
 export const App = () => {
   const [contacts, setContacts] = useState(
-    () => JSON.parse(window.localStorage.getItem('phoneBook')) ?? ''
+    () => JSON.parse(window.localStorage.getItem('phoneBook')) ?? []
   );
   const [filter, setFilter] = useState('');
 
@@ -14,12 +14,9 @@ export const App = () => {
   }, [contacts]);
 
   const formSubmitHandler = data => {
-    let check = false;
-    if (contacts !== '') {
-      check = contacts.find(
-        el => el.name.toLowerCase() === data.name.toLowerCase()
-      );
-    }
+    const check = contacts.find(
+      el => el.name.toLowerCase() === data.name.toLowerCase()
+    );
     return check
       ? alert(`${data.name} is already exist.`)
       : setContacts([...contacts, data]);
