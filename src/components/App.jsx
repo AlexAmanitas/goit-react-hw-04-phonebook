@@ -25,9 +25,17 @@ export const App = () => {
       : setContacts([...contacts, data]);
   };
 
+  const getFilteredContacts = () => {
+    return contacts.filter(el =>
+      el.name.toLowerCase().includes(filter.toLowerCase())
+    );
+  };
+
   const handleClickDelete = id => {
     setContacts(contacts.filter(el => el.id !== id));
   };
+
+  const filteredContacts = getFilteredContacts();
 
   return (
     <div>
@@ -35,7 +43,7 @@ export const App = () => {
       <Form onSubmit={formSubmitHandler} />
       <h2 style={{ color: '#FF6C00' }}>Contacts</h2>
       <Filter onChange={setFilter} />
-      <Contacts onDelete={handleClickDelete} data={contacts} filter={filter} />
+      <Contacts onDelete={handleClickDelete} data={filteredContacts} />
     </div>
   );
 };

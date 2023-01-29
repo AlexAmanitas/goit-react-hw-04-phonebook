@@ -2,19 +2,13 @@ import ContactsListItem from 'components/ContactsItem';
 import PropTypes from 'prop-types';
 import { ContactList } from './Contacts.styled';
 
-const Contacts = ({ data, filter, onDelete }) => {
-  const filterData = data.filter(el => {
-    return el.name.toLowerCase().includes(filter.toLowerCase());
-  });
-
+const Contacts = ({ data, onDelete }) => {
   const handleOnClick = evt => {
     onDelete(evt);
   };
   return (
     <ContactList>
-      {filterData.map(({ name, number, id }) => {
-        console.log(id, name, number);
-
+      {data.map(({ name, number, id }) => {
         return (
           <ContactsListItem
             key={id}
