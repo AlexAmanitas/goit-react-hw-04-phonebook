@@ -34,5 +34,4 @@ Contacts.propTypes = {
       number: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
-  filter: PropTypes.string,
 };
