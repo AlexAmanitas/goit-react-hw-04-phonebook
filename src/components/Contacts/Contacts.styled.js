@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const ContactList = styled.ul``;
+export const ContactList = styled.ul`
+  /* width: 400px; */
+`;
 
 export const ContactListItem = styled.li`
   display: flex;

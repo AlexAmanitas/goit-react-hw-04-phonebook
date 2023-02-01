@@ -2,17 +2,17 @@ import styled from 'styled-components';
 
 export const ContactsItem = styled.li`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 `;
 
 export const ContactName = styled.p`
-  margin-right: 15px;
+  margin-left: 30px;
 `;
 
 export const ContactNumber = styled.p`
   margin-right: 40px;
-  margin-left: auto;
+  /* margin-left: auto; */
 `;
 
 export const DeleteButton = styled.button`

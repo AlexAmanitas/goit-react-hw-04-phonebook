@@ -12,7 +12,6 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  width: 400px;
   font-size: 15px;
   margin: 5px 20px 15px;
   padding: 7px;
